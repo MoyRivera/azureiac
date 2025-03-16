@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Get time stamp
+TIMESTAMP="[`date "+%H:%M:%S %d.%m.%Y"`] $@"
+#echo ${TIMESTAMP}
+
+git add --all . 
+git commit -m "${TIMESTAMP}"
+git push -f -u origin main
